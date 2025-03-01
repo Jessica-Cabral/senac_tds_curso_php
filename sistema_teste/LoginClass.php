@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 //Classe Login
 class LoginClass {
     #atributos

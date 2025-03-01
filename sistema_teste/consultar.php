@@ -44,6 +44,15 @@ $objAcessar->controlarSessao();
                             <li><a class="dropdown-item" href="cadastrar.php"><i class="bi bi-person-add"></i> Cadastrar</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-boxes"></i> Produto
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="consultar.php"><i class="bi bi-search"></i> Consultar</a></li>
+                            <li><a class="dropdown-item" href="cadastrar.php"><i class="bi bi-plus-lg"></i> Cadastrar</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">

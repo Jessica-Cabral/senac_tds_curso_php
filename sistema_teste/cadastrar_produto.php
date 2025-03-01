@@ -49,8 +49,8 @@ $objAcessar->controlarSessao();
                         <i class="bi bi-boxes"></i> Produto
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="consultar.php"><i class="bi bi-search"></i> Consultar</a></li>
-                            <li><a class="dropdown-item" href="cadastrar.php"><i class="bi bi-plus-lg"></i> Cadastrar</a></li>
+                            <li><a class="dropdown-item" href="consultar_produto.php"><i class="bi bi-search"></i> Consultar</a></li>
+                            <li><a class="dropdown-item" href="cadastrar_produto.php"><i class="bi bi-plus-lg"></i> Cadastrar</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -67,58 +67,43 @@ $objAcessar->controlarSessao();
             </div>
         </div>
     </nav>
-    <!-- formulário de cadastro de cliente -->
-    <div class="container-fluid">
-        <form action="cliente.php" method="post">
+    
+    <!-- formulário de cadastro de produto -->
+        <div class="container-fluid">
+        <form action="produto.php" method="post">
             <div class="row">
-                <div class="col-6">
+                <div class="col-3">
                     <div class="mb-3">
-                        <label for="nome" class="form-label">Nome</label>
-                        <input type="text" name="nome" class="form-control" id="nome">
+                        <label for="codigo_produto" class="form-label">Código</label>
+                        <input type="text" name="nome" class="form-control" id="codigo_produto">
                     </div>
-                <div class="col-6">
+                <div class="col">
                     <div class="mb-3">
-                        <label for="dataNascimento" class="form-label">Data de Nascimento</label>
-                        <input type="date" name="dataNascimento" class="form-control" id="dataNascimento">
+                        <label for="nome_produto" class="form-label">Nome</label>
+                        <input type="text" name="nome_produto" class="form-control" id="nome_produto">
                     </div> 
                 </div>
             </div>
             <div class="rouw">
-                <div class="col-9">
+                <div class="col-4">
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" name="email" class="form-control" id="email" placeholder="nome@exemplo.com">
+                        <label for="valor_produto" class="form-label">Valor </label>
+                        <input type="number" name="valor_produto" class="form-control" id="                        <input type="number" name="valor_produto" class="form-control" id="email" placeholder="nome@exemplo.com">">
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="mb-3">
-                        <label for="cpf" class="form-label">CPF</label>
-                        <input type="text" class="form-control" name="cpf" id="cpf" rows="3" maxlength="11"></input>
+                        <label for="cpf" class="form-label">Data da aquisição</label>
+                        <input type="data" class="form-control" name="cpf" id="cpf" rows="3" maxlength="11"></input>
                     </div>
                 </div>
+                <button type="submit" name="salvar_produto" class="btn btn-primary"><i class="bi bi-floppy"></i> Salvar</button>
+                <button type="reset" class="btn btn-warning"><i class="bi bi-x-circle"></i> Fechar</button>
             </div>
-            <br>
-            <div class="col-6">
-                <select class="form-select" name="estado" aria-label="Default select example">
-                    <option selected>Estado</option>
-                    <option value="maranhao" name="estado" >Maranhão</option>
-                    <option value="piaui"name="estado" >Piaui</option>
-                    <option value="para" name="estado">Pará</option>
-                    <option value="tocantins" name="estado">Tocantins</option>
-                </select>
-                </div>
-            <br>
-            <div class="col-6">
-                    <div class="mb-3">
-                        <label for="observacao" class="form-label">Observação</label>
-                        <textarea class="form-control" name="observacao" id="observacao" rows="3"></textarea>
-                    </div>
-            </div>
-            <button type="submit" name="salvar" class="btn btn-primary"><i class="bi bi-floppy"></i> Salvar</button>
-            <button type="reset" class="btn btn-warning"><i class="bi bi-x-circle"></i> Cancelar</button>
+
+
         </form>
     </div>
-   
     <!-- Modal -->
     <div class="modal fade" id="mensagem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
