@@ -1,5 +1,8 @@
 <?php
-//session_start();
+//nao mostrar erros
+error_reporting(~E_ALL & ~E_NOTICE & ~E_WARNING);
+//iniciar sessao
+session_start();
 //Classe Login
 class LoginClass {
     #atributos
@@ -27,13 +30,12 @@ class LoginClass {
     {
         $_SESSION['titulo_sistema'] = "Sistema Gestão";
         $_SESSION['nome_sistema'] = "SG 1.0";
-        $_SESSION['mostrar_mensagem'] = false;
     }
 
-    public function efetuarLogin($login, $senha) {
+    public function efetuarLogin($login_usuario, $senha_usuario) {
         #setar os atributos
-        $this->setLogin($login);
-        $this->setSenha($senha);
+        $this->setLogin($login_usuario);
+        $this->setSenha($senha_usuario);
         //verificar login e senha
         if ($this->getLogin() == 'maria' and $this->getSenha() == '123456'){
             #criar variáveis de sessao
