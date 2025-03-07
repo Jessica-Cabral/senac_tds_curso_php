@@ -1,0 +1,8 @@
+#Projeto com herança de Classe
+1. Criar Classes AnimalClass
+2. Criar Classes auxiliares GatoClass.php e CachorroClass
+    incluir classe AnimalClass
+    criar classes com extends para AnimalClass
+    metodos polimorfismo (mesmo método de AnimalClass mas com comportamento diferente)
+3. Criar index com inclusão das instâncias
+    incluir as classes criadas e relacionadas
