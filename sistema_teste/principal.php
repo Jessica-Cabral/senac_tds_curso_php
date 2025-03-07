@@ -1,13 +1,13 @@
 <?php
 //iniciar sessão
-//session_start();
+session_start();
 //incluir classe LoginClass
 include_once "LoginClass.php";
 //criar objeto instância
 $acessar = new LoginClass();
 //verificar se fez login
 $acessar->controlarSessao();
-
+error_reporting(~E_ALL & ~E_NOTICE & ~E_WARNING);
 ?>
 
 <!doctype html>
@@ -58,10 +58,10 @@ $acessar->controlarSessao();
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <?php echo $_SESSION['login'] ?>
+                            <i class="bi bi-person-fill"></i> <?php echo strtoupper($_SESSION['login']); ?>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="sair.php"><i class="bi bi-box-arrow-right">Sair</a></li>
+                          <li><a class="dropdown-item" href="sair.php"><i class="bi bi-box-arrow-right"></i> Sair</a></li>
                         </ul>
                     </li>
                 </ul>
